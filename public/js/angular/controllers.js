@@ -121,8 +121,8 @@ angular
       function measureThings() {
         rectangle = document.getElementById('iris-pupil').getBoundingClientRect();
         center = {
-          x: (rectangle.width / 2) + rectangle.x,
-          y: (rectangle.height / 2) + rectangle.y
+          x: (rectangle.width / 2) + (rectangle.x || rectangle.left),
+          y: (rectangle.height / 2) + (rectangle.y || rectangle.top)
         };
       }
 
