@@ -535,3 +535,228 @@
 #iris-pupil {
   position: relative;
 }
+
+.eyelid {
+  border-radius: 50%;
+  height: 5.3rem;
+  margin: 0 auto;
+  position: relative;
+  top: -0.5rem;
+  width: 5.3rem;
+  overflow: hidden;
+  -webkit-animation: blinking-eye 7s infinite;
+  -o-animation: blinking-eye 7s infinite;
+  -moz-animation: blinking-eye 7s infinite;
+  animation: blinking-eye 7s infinite;
+}
+
+.sclera {
+  background: @white;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.iris {
+  background: #443F27;
+  border-radius: 50%;
+  height: 65%;
+  width: 65%;
+  padding: 12%;
+  position: relative;
+  top: 17.5%;
+  left: 17.5%;
+  -webkit-animation: searching-eye 7s infinite;
+  -o-animation: searching-eye 7s infinite;
+  -moz-animation: searching-eye 7s infinite;
+  animation: searching-eye 7s infinite;
+}
+
+.pupil {
+  background: @black;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.pupil::after {
+  display: block;
+  content: '';
+  background: @white;
+  border-radius: 50%;
+  height: 32%;
+  width: 32%;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+
+@-webkit-keyframes blinking-eye {
+  0%, 90%, 100% {
+    height: 5.3rem;
+    top: -0.5rem;
+  }
+  95% {
+    height: 0.2rem;
+    top: 2.05rem;
+  }
+}
+
+@-o-keyframes blinking-eye {
+  0%, 90%, 100% {
+    height: 5.3rem;
+    top: -0.5rem;
+  }
+  95% {
+    height: 0.2rem;
+    top: 2.05rem;
+  }
+}
+
+@-moz-keyframes blinking-eye {
+  0%, 90%, 100% {
+    height: 5.3rem;
+    top: -0.5rem;
+  }
+  95% {
+    height: 0.2rem;
+    top: 2.05rem;
+  }
+}
+
+@keyframes blinking-eye {
+  0%, 90%, 100% {
+    height: 5.3rem;
+    top: -0.5rem;
+  }
+  95% {
+    height: 0.2rem;
+    top: 2.05rem;
+  }
+}
+
+@-webkit-keyframes searching-eye {
+  0%, 85.714285716%, 100% {
+    top: 17.5%;
+    left: 17.5%;
+  }
+  14.285714286% {
+    top: 17.5%;
+    left: 8%;
+  }
+  28.571428572% {
+    top: 30%;
+    left: 8%;
+  }
+  42.857142858% {
+    top: 30%;
+    left: 30%;
+  }
+  57.142857144% {
+    top: 8%;
+    left: 30%;
+  }
+  71.42857143% {
+    top: 8%;
+    left: 8%;
+  }
+  85.7142857% {
+    top: 0%;
+    left: 17.5%;
+  }
+}
+
+@-o-keyframes searching-eye {
+  0%, 85.714285716%, 100% {
+    top: 17.5%;
+    left: 17.5%;
+  }
+  14.285714286% {
+    top: 17.5%;
+    left: 8%;
+  }
+  28.571428572% {
+    top: 30%;
+    left: 8%;
+  }
+  42.857142858% {
+    top: 30%;
+    left: 30%;
+  }
+  57.142857144% {
+    top: 8%;
+    left: 30%;
+  }
+  71.42857143% {
+    top: 8%;
+    left: 8%;
+  }
+  85.7142857% {
+    top: 0%;
+    left: 17.5%;
+  }
+}
+
+@-moz-keyframes searching-eye {
+  0%, 85.714285716%, 100% {
+    top: 17.5%;
+    left: 17.5%;
+  }
+  14.285714286% {
+    top: 17.5%;
+    left: 8%;
+  }
+  28.571428572% {
+    top: 30%;
+    left: 8%;
+  }
+  42.857142858% {
+    top: 30%;
+    left: 30%;
+  }
+  57.142857144% {
+    top: 8%;
+    left: 30%;
+  }
+  71.42857143% {
+    top: 8%;
+    left: 8%;
+  }
+  85.7142857% {
+    top: 0%;
+    left: 17.5%;
+  }
+}
+
+@keyframes searching-eye {
+  0%, 85.714285716%, 100% {
+    top: 17.5%;
+    left: 17.5%;
+  }
+  14.285714286% {
+    top: 17.5%;
+    left: 8%;
+  }
+  28.571428572% {
+    top: 30%;
+    left: 8%;
+  }
+  42.857142858% {
+    top: 30%;
+    left: 30%;
+  }
+  57.142857144% {
+    top: 8%;
+    left: 30%;
+  }
+  71.42857143% {
+    top: 8%;
+    left: 8%;
+  }
+  85.7142857% {
+    top: 0%;
+    left: 17.5%;
+  }
+}
+
