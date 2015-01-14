@@ -318,7 +318,7 @@
 @privacyred: #F40000;
 
 .home-privacy-day {
-  background: @lightyellow;
+  background: @lightgrey;
   color: @privacyred;
   padding: 5rem 0 6rem;
   text-align: center;
@@ -328,6 +328,7 @@
   }
 
   h4 {
+    color: @grey;
     font-weight: 200;
     margin-bottom: 2rem;
   }
@@ -404,6 +405,14 @@
 
     &::before, &::after {
       border-color: @privacyred;
+    }
+
+    svg {
+      height: auto;
+      position: relative;
+      left: -0.4rem;
+      top: -2.2rem;
+      width: 100%;
     }
   }
   .back {
@@ -521,4 +530,8 @@
   .privacy-eye {
     right: 20%;
   }
+}
+
+#iris-pupil {
+  position: relative;
 }
