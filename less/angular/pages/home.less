@@ -360,6 +360,7 @@
   margin: 1.5rem auto;
   perspective: 45rem;
   position: relative;
+  z-index: 300;
   width: 7.5rem;
 
   h6 {
@@ -396,13 +397,13 @@
     }
 
     &::before {
-      border-bottom: 21.5px solid @privacyred;
-      top: -20px;
+      border-bottom: 2.15rem solid @privacyred;
+      top: -2rem;
     }
 
     &::after {
-      border-top: 21.5px solid @privacyred;
-      bottom: -20px;
+      border-top: 2.15rem solid @privacyred;
+      bottom: -2rem;
       left: 0;
     }
 
@@ -433,13 +434,13 @@
     }
 
     &::before {
-      border-bottom: 21.5px solid @lightyellow;
-      top: -20px;
+      border-bottom: 2.15rem solid @lightyellow;
+      top: -2rem;
     }
 
     &::after {
-      border-top: 21.5px solid @lightyellow;
-      bottom: -20px;
+      border-top: 2.15rem solid @lightyellow;
+      bottom: -2rem;
     }
   }
 
@@ -463,8 +464,9 @@
     &::before, &::after {
       content: '';
       background-color: transparent;
-      border-left: 37.5px solid transparent;
-      border-right: 37.5px solid transparent;
+      border-left: 3.75rem solid transparent;
+      border-right: 3.75rem solid transparent;
+      left: 0;
       height: 0;
       position: absolute;
       width: 0;
