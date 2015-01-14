@@ -116,12 +116,15 @@ angular
       });
 
       var
-        rectangle = document.getElementById('iris-pupil').getBoundingClientRect(),
-        radius = 9,
+        rectangle, radius = 9, center;
+
+      function measureThings() {
+        rectangle = document.getElementById('iris-pupil').getBoundingClientRect();
         center = {
           x: (rectangle.width / 2) + rectangle.x,
           y: (rectangle.height / 2) + rectangle.y
         };
+      }
 
       function doMaths(x, y, radius) {
         var
@@ -141,9 +144,13 @@ angular
         document.getElementById('iris-pupil').style.transform = 'translate(' + coords.x + 'px, ' + coords.y + 'px)';
       }
 
-      document.onmousemove = function (e) {
-        translatePupil(doMaths(e.pageX - center.x, e.pageY - center.y, radius));
-      };
+      if (document.getElementById('iris-pupil')) {
+        measureThings();
+        window.onresize = measureThings;
+        window.onmousemove = function (e) {
+          translatePupil(doMaths(e.pageX - center.x, e.pageY - center.y, radius));
+        };
+      }
     }
   ])
   .controller('competencyController', ['$rootScope', '$scope', '$routeParams',
